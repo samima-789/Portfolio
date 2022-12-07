@@ -6,11 +6,11 @@
 	outline: none;
 	border: none;
 	text-decoration: none;
-	transition: .2s ;
+	transition: .3s ;
 }
 
 html{
-	font-size: 63%;
+	font-size: 75%;
 	scroll-behavior: smooth;
 }
 
@@ -21,7 +21,12 @@ body{
 }
 
 
-header{
+
+
+
+
+
+.header{
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -37,29 +42,55 @@ header{
                2px 2px 5px rgba(94, 104, 121, 0.288)
 }
 
-.logo{
+.header .logo{
 	text-decoration: none;
 	font-size: 30px;
 	font-weight: 600;
 	color: #2D5469;
-	
 }
 
-.navbar{
+.header .logo span{
+	color: orange;
+}
+
+.header .navbar{
 	display: flex;
 }
 
-.navbar li{
+.header .navbar li{
 	list-style: none;
 }
 
-.navbar a{
+.header .navbar a{
 	text-decoration: none;
 	font-size: 1rem;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	color: #000;
 	font-weight: 500px;
 }
+
+.header .navbar a:hover{
+    color: orange;
+    border-bottom: .1rem solid orange;
+    ;
+}
+
+.header div{
+	color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 10px;
+    margin-left: 2rem;
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+#menu-btn{
+	display: none;
+}
+
+
 
 
 .heading{
@@ -72,7 +103,11 @@ header{
 }
 
 
-.hero{
+
+
+
+
+.nav-bar{
     margin-top: 100px;
 }
 
@@ -119,6 +154,27 @@ header{
     transform: scale(1.1);
 }
 
+.info-part .row a{
+	color: transparent;
+}
+
+.info-part .row:hover .content h3{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	display: grid;
+	font-size: 30px;
+	place-items: center;
+	background: #ccc;
+	opacity: .5;
+}
+
+
+
+
 
 
 
@@ -139,7 +195,6 @@ header{
 	           -.4rem -.4rem 1rem #fff;
 	position: relative;
 	border: 1rem solid transparent;
-   
 }
 
 .box-container .box img{
@@ -154,7 +209,7 @@ header{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #61DEBD;
+	background: orange;
 	display: grid;
 	place-items: center;
 	transform: scale(0);
@@ -169,3 +224,102 @@ header{
 	opacity: 1;
 }
 
+
+
+
+
+
+.footer{
+    text-align: center;
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    color: orange;
+    border: 1px solid orange;
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: orange;
+	color: #fff;
+	transform: rotate(360deg);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:#000;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color: orange;
+}
+
+
+
+
+
+/*--------------------------Media Quarey--------------------------------*/
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; 
+		right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right:0;
+    }
+
+    .header .navbar a{
+        color: #000;
+        display: inline-block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 70%;
+    }
+
+}
