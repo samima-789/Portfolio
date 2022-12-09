@@ -129,7 +129,7 @@ body{
 
 .info-part{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px,auto));
+	grid-template-columns: repeat(auto-fit, minmax(284px,auto));
 	grid-gap: 2rem;
 	align-items: center;
 	margin-top: 4rem;
